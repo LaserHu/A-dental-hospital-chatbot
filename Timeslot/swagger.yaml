@@ -1,0 +1,117 @@
+swagger: '2.0'
+basePath: "/TimeslotService"
+info:
+  version: "1.0.0"
+  title: "Timeslot Service"
+  description: "Timeslot Service api"
+
+paths:
+  /Booking/{id}/{name}:
+    post:
+      tags:
+      - TimeslotService
+      parameters:
+      - name: "id"
+        in: "path"
+        required: true
+        type: "string"
+      - name: "name"
+        in: "path"
+        required: true
+        type: "string"
+    
+      responses:
+        200:
+          description: "Book Successful"
+          schema:
+            $ref: '#/definitions/appointment'
+        404:
+          description: "Book not Successful"
+        500:
+          description: "Interval Error"
+      description: Book An Appointment
+      
+  /Cancel/{id}/{name}:
+    post:
+      tags:
+      - TimeslotService
+      parameters:
+      - name: "id"
+        in: "path"
+        required: true
+        type: "string"
+      - name: "name"
+        in: "path"
+        required: true
+        type: "string"
+    
+      responses:
+        200:
+          description: "OK"
+          schema:
+            $ref: '#/definitions/appointment'
+        404:
+          description: "Not found"
+      description: Cancel An Appointment
+      
+  /appointment/{name}:
+    get:
+      tags:
+      - TimeslotService
+      parameters:
+      - name: "name"
+        in: "path"
+        required: true
+        type: "string"
+    
+      responses:
+        200:
+          description: "OK"
+          schema:
+            $ref: '#/definitions/appointment'
+        404:
+          description: "Not found"
+      description: Check An Appointment
+      
+  /timetable/{doctor}/{date}:
+    get:
+      tags:
+      - TimeslotService
+      parameters:
+      - name: "doctor"
+        in: "path"
+        required: true
+        type: "string"
+      - name: "date"
+        in: "path"
+        required: true
+        type: "string"
+    
+      responses:
+        200:
+          description: "OK"
+        404:
+          description: "Not found"
+      description: Get Timetable of a doctor
+definitions:
+  appointment:
+    type: object
+    properties:
+      id:
+        type: integer
+      date:
+        type: string
+        format: date
+      time:
+        type: string
+      customer:
+        type: string
+      doctor:
+        type: string
+      status:
+        type: string
+        enum:
+        - reserved
+        - canceled
+
+

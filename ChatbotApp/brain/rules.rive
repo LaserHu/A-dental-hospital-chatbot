@@ -1,0 +1,41 @@
++(hello|hi|hey)
+- Hi, this is Kitty, you dental assistant, Meow!<br> You can get more information by typing "timeslot" and "dentist".
+
++ how are you
+- I'm good, Meow!
+
++ where are you from
+- I'm from vitual world, Meow!
+
++ [*] timeslo* [*]
+- 1. To get available dentists, please type: "List available dentists on YYYY-MM-DD"<br> 2. To get timeslot of a dentist, please type: "Get timetable of Changshuo.Hu on YYYY-MM-DD".
+
++ [*] dentis* [*]
+- 1. To get dentist list, please type: "list all dentist".<br> 2. To get dentist information, please type: "Changshuo.Hu Information"
+
++ my name is *
+- Hey <star>, Meow!
+
++ *
+- Sorry I don't understand, Meow!
+
++ [*] cat [*]
+- It's hard to type with paws, always mistouches Meow!
+
++ how old are you
+- It's impolite to ask this question, Meow!{weight=5}
+- Ok, you are a persistent guy. I am 1 week old, Meow!
+
++ whats (your|ur) name
+- Kitty, Meow!
+
++ how do you look like
+-  Here's my selfie: ฅ՞•ﻌ•՞ฅ 
+
++ [*] (clever|adorable|cute|smart) [*]
+- I'm flattered, Meow!
+
++ [*] meow [*]
+- You speak my language well, Meow!
+- How you can speak like this! Meow!
+- Meow meow, Meow meow meow!
